@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Started · BB DSP Manuals</title>
+<meta name="description" content="How to install BB DSP plug-ins and use their shared controls.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head><body style="--accent:#F26419;--accent-ink:#BF5319;--accent-lcd:#F26419;--accent-on:#1E1C18;--accent-soft:#FAE5D7;">
+<header class="top"><div class="wrap top-in">
+<a class="brand" href="index.html"><svg class="logo" viewBox="280 185 1390 1410" role="img" aria-label="BB DSP">
+<g fill="#B3B3B3">
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571"/>
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571" transform="rotate(90 973 891)"/>
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571" transform="rotate(180 973 891)"/>
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571" transform="rotate(270 973 891)"/>
+</g>
+<g fill="#4D4D4D" fill-rule="evenodd">
+<path d="M959,493 L657,799 L748,890 L656,985 L958,1290 Z M863,725 L791,799 L862,869 Z M861,913 L790,985 L862,1058 Z"/>
+<path d="M959,493 L657,799 L748,890 L656,985 L958,1290 Z M863,725 L791,799 L862,869 Z M861,913 L790,985 L862,1058 Z" transform="translate(1951 0) scale(-1 1)"/>
+</g>
+<circle class="m m1" cx="674" cy="587" r="42" fill="#E8352A"/>
+<line class="m m2" x1="1236" y1="560" x2="1306" y2="628" stroke="#3B80C4" stroke-width="26"/>
+<rect class="m m3" x="551" y="832" width="122" height="122" fill="#EB712F" transform="rotate(45 612 893)"/>
+<rect class="m m4" x="1279" y="828" width="122" height="122" fill="#62D1B5" transform="rotate(45 1340 889)"/>
+<line class="m m5" x1="646" y1="1152" x2="714" y2="1220" stroke="#F4C443" stroke-width="26"/>
+<circle class="m m6" cx="1270" cy="1192" r="42" fill="#7DD23F"/>
+</svg><span><b>BB DSP</b><small>DIGITAL SONIC PLAYGROUND</small></span></a>
+<nav><a href="index.html"><span class="t"><span class="sr">PLUG-INS</span><span aria-hidden="true">PLUG-INS</span></span></a><a href="getting-started.html" aria-current="page"><span class="t"><span class="sr">GETTING STARTED</span><span aria-hidden="true">GETTING STARTED</span></span></a></nav></div></header>
+<main>
+<section class="wrap doc">
+<p class="eyebrow"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>GETTING STARTED</span></p>
+<h1 class="ph">Set up once, then play.</h1>
+<p class="lede">Every BB DSP plug-in shares the same controls, the same colours and the same layout, so once you know one, you know them all.</p>
+
+<h2 class="sec"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>INSTALLING</span></h2>
+<div class="card"><p>Each plug-in comes as an <b>AU</b> component, a <b>VST3</b> and a <b>Standalone</b> app. Copy them to:</p>
+<div class="paths"><div><span class="lcd w">AU</span><code>~/Library/Audio/Plug-Ins/Components/</code></div>
+<div><span class="lcd w">VST3</span><code>~/Library/Audio/Plug-Ins/VST3/</code></div>
+<div><span class="lcd w">APP</span><code>/Applications/</code></div></div>
+<p>Then restart your DAW so it rescans. In Logic Pro, new plug-ins appear under <b>Audio Units → BB DSP</b>. If one is missing, open the Plug-in Manager and choose <b>Reset &amp; Rescan Selection</b>.</p></div>
+
+<h2 class="sec"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>WHERE EACH ONE GOES</span></h2>
+<div class="places"><div class="place"><h3><span class="t"><span class="sr">AUDIO FX</span><span aria-hidden="true">AUDIO FX</span></span></h3><p>Insert in an Audio FX slot on any audio or instrument track.</p><p class="who"><span class="t"><span class="sr">QUiVER</span><span aria-hidden="true">QU<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>VER</span></span>, <span class="t"><span class="sr">REVERiE</span><span aria-hidden="true">REVER<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>E</span></span>, <span class="t"><span class="sr">BLiP</span><span aria-hidden="true">BL<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>P</span></span>, <span class="t"><span class="sr">iONiSE</span><span aria-hidden="true"><svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>ON<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>SE</span></span>, <span class="t"><span class="sr">RiPPLE</span><span aria-hidden="true">R<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>PPLE</span></span>, <span class="t"><span class="sr">iNHALE</span><span aria-hidden="true"><svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>NHALE</span></span>, <span class="t"><span class="sr">iNTERLUDE</span><span aria-hidden="true"><svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>NTERLUDE</span></span>, <span class="t"><span class="sr">TWiRL</span><span aria-hidden="true">TW<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>RL</span></span>, <span class="t"><span class="sr">HiRAETH</span><span aria-hidden="true">H<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>RAETH</span></span></p></div><div class="place"><h3><span class="t"><span class="sr">INSTRUMENT</span><span aria-hidden="true">INSTRUMENT</span></span></h3><p>Load as the track&#x27;s software instrument.</p><p class="who"><span class="t"><span class="sr">BOREALiS</span><span aria-hidden="true">BOREAL<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>S</span></span></p></div><div class="place"><h3><span class="t"><span class="sr">MIDI FX</span><span aria-hidden="true">MIDI FX</span></span></h3><p>Insert in the MIDI FX slot above the instrument. Its CC output reaches the instrument on the same track only.</p><p class="who"><span class="t"><span class="sr">PiPELiNE</span><span aria-hidden="true">P<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>PEL<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>NE</span></span></p></div><div class="place"><h3><span class="t"><span class="sr">MIDI-CONTROLLED FX</span><span aria-hidden="true">MIDI-CONTROLLED FX</span></span></h3><p>In Logic, load in a Software Instrument track&#x27;s INSTRUMENT slot under AU MIDI-controlled Effects, then pick the audio source in the plug-in header&#x27;s Side Chain menu.</p><p class="who"><span class="t"><span class="sr">PRiSM</span><span aria-hidden="true">PR<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>SM</span></span></p></div></div>
+
+<h2 class="sec"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>THE CONTROLS</span></h2>
+<div class="card table"><div class="row"><div class="rn"><span class="t"><span class="sr">KNOB</span><span aria-hidden="true">KNOB</span></span></div><div class="rv"><span class="lcd">DRAG</span></div><div class="rd">Drag up or down to turn. The flip counter beside it shows the value.</div></div><div class="row"><div class="rn"><span class="t"><span class="sr">COUNTER</span><span aria-hidden="true">COUNTER</span></span></div><div class="rv"><span class="lcd">CLICK</span></div><div class="rd">Click the digits to type an exact value, then press Return.</div></div><div class="row"><div class="rn"><span class="t"><span class="sr">DROPDOWN</span><span aria-hidden="true">DROPDOWN</span></span></div><div class="rv"><span class="lcd">CLICK</span></div><div class="rd">Click the dark box to pick from a list.</div></div><div class="row"><div class="rn"><span class="t"><span class="sr">SWITCH</span><span aria-hidden="true">SWITCH</span></span></div><div class="rv"><span class="lcd">CLICK</span></div><div class="rd">Segmented switches light the chosen option in the plug-in&#x27;s colour.</div></div><div class="row"><div class="rn"><span class="t"><span class="sr">ON</span><span aria-hidden="true">ON</span></span></div><div class="rv"><span class="lcd">CLICK</span></div><div class="rd">Turns the plug-in or card on. Off passes the sound through untouched.</div></div><div class="row"><div class="rn"><span class="t"><span class="sr">MIN</span><span aria-hidden="true">MIN</span></span></div><div class="rv"><span class="lcd">CLICK</span></div><div class="rd">Folds a card down to just its animation.</div></div><div class="row"><div class="rn"><span class="t"><span class="sr">PRESET</span><span aria-hidden="true">PRESET</span></span></div><div class="rv"><span class="lcd">CLICK</span></div><div class="rd">Header menu of factory sounds (on plug-ins that have them).</div></div><div class="row"><div class="rn"><span class="t"><span class="sr">OPTIONS</span><span aria-hidden="true">OPTIONS</span></span></div><div class="rv"><span class="lcd">CLICK</span></div><div class="rd">Swaps the main page for the set-and-forget settings.</div></div></div>
+
+<h2 class="sec"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>READING THE COLOURS</span></h2>
+<div class="card colours">
+<div><span class="sw" style="background:#B3B3B3"></span><p><b>Frame grey</b> is structure: tracks, guides, outlines and thresholds.</p></div>
+<div><span class="sw" style="background:#4D4D4D"></span><p><b>Charcoal</b> is a shape at rest: nothing is happening to the sound.</p></div>
+<div><span class="sw" style="background:var(--accent)"></span><p><b>The plug-in's own colour</b> means active right now. If you see it move, the effect is working.</p></div>
+<div><span class="sw" style="background:#232019"></span><p><b>Dark wells</b> hold values: counters and dropdowns.</p></div>
+</div>
+
+<h2 class="sec"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>TEMPO AND TIMING</span></h2>
+<div class="card"><p>Anything rhythmic (sync rates, bar-length loops, sequencers) locks to the host's tempo <i>and</i> its position in the bar, so it lands in the same place every time you press play. Plug-ins that need to look ahead (iNTERLUDE, HiRAETH) report their latency so your DAW lines everything up. iNHALE is the one exception: it delays by whole bars, and tells you how far to move your region.</p></div>
+</section></main>
+<footer class="foot"><div class="wrap"><svg class="mk" width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>BB DSP · Digital Sonic Playground</span><span class="sp"></span><span>AU · VST3 · Standalone · macOS</span></div></footer>
+<script src="assets/site.js"></script>
+</body></html>

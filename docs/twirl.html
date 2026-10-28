@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TWiRL Manual · BB DSP</title>
+<meta name="description" content="Lo-fi chorus, vibrato and a faux rotary: one wobbly delay chip, four knobs and a HAVOC switch.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head><body style="--accent:#A4243B;--accent-ink:#A4243B;--accent-lcd:#C77987;--accent-on:#FBFAF6;--accent-soft:#EFDCDC;">
+<header class="top"><div class="wrap top-in">
+<a class="brand" href="index.html"><svg class="logo" viewBox="280 185 1390 1410" role="img" aria-label="BB DSP">
+<g fill="#B3B3B3">
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571"/>
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571" transform="rotate(90 973 891)"/>
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571" transform="rotate(180 973 891)"/>
+<polygon points="697,472 971,200 1253,476 1156,573 971,397 796,571" transform="rotate(270 973 891)"/>
+</g>
+<g fill="#4D4D4D" fill-rule="evenodd">
+<path d="M959,493 L657,799 L748,890 L656,985 L958,1290 Z M863,725 L791,799 L862,869 Z M861,913 L790,985 L862,1058 Z"/>
+<path d="M959,493 L657,799 L748,890 L656,985 L958,1290 Z M863,725 L791,799 L862,869 Z M861,913 L790,985 L862,1058 Z" transform="translate(1951 0) scale(-1 1)"/>
+</g>
+<circle class="m m1" cx="674" cy="587" r="42" fill="#E8352A"/>
+<line class="m m2" x1="1236" y1="560" x2="1306" y2="628" stroke="#3B80C4" stroke-width="26"/>
+<rect class="m m3" x="551" y="832" width="122" height="122" fill="#EB712F" transform="rotate(45 612 893)"/>
+<rect class="m m4" x="1279" y="828" width="122" height="122" fill="#62D1B5" transform="rotate(45 1340 889)"/>
+<line class="m m5" x1="646" y1="1152" x2="714" y2="1220" stroke="#F4C443" stroke-width="26"/>
+<circle class="m m6" cx="1270" cy="1192" r="42" fill="#7DD23F"/>
+</svg><span><b>BB DSP</b><small>DIGITAL SONIC PLAYGROUND</small></span></a>
+<nav><a href="index.html"><span class="t"><span class="sr">PLUG-INS</span><span aria-hidden="true">PLUG-INS</span></span></a><a href="getting-started.html"><span class="t"><span class="sr">GETTING STARTED</span><span aria-hidden="true">GETTING STARTED</span></span></a></nav></div></header>
+<main>
+<section class="phero wrap">
+<div class="phero-txt">
+<p class="eyebrow"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>AUDIO FX</span></p>
+<h1 class="pname"><span class="t"><span class="sr">TWiRL</span><span aria-hidden="true">TW<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>RL</span></span></h1>
+<p class="lede">Lo-fi chorus, vibrato and a faux rotary: one wobbly delay chip, four knobs and a HAVOC switch.</p>
+<p class="chips"><span class="chip">AU</span><span class="chip">VST3</span><span class="chip">STANDALONE</span></p>
+</div>
+<div class="phero-motion"><svg class="motion" viewBox="0 0 240 240" aria-hidden="true">
+<rect x="40" y="100" width="40" height="40" fill="none" stroke="#B3B3B3" stroke-width="3"/>
+<g style="animation:sway 2.6s ease-in-out infinite alternate"><rect x="130" y="95" width="50" height="50" fill="var(--accent)" style="transform-origin:155px 120px;animation:spin 2.6s linear infinite"/></g></svg></div>
+</section>
+<section class="wrap"><figure class="main-shot"><div class="shot"><img src="img/twirl/twirl_default.webp" alt="The shape tumbles with the LFO; its distance from the dry square is the delay."></div><figcaption>The shape tumbles with the LFO; its distance from the dry square is the delay.</figcaption></figure></section>
+<div class="wrap layout">
+<aside class="toc"><div><a href="#overview"><span class="t"><span class="sr">OVERVIEW</span><span aria-hidden="true">OVERVIEW</span></span></a><a href="#quick"><span class="t"><span class="sr">QUICK START</span><span aria-hidden="true">QUICK START</span></span></a><a href="#how"><span class="t"><span class="sr">HOW IT WORKS</span><span aria-hidden="true">HOW IT WORKS</span></span></a><a href="#controls"><span class="t"><span class="sr">CONTROLS</span><span aria-hidden="true">CONTROLS</span></span></a><a href="#tips"><span class="t"><span class="sr">TIPS</span><span aria-hidden="true">TIPS</span></span></a><a href="#specs"><span class="t"><span class="sr">SPECS</span><span aria-hidden="true">SPECS</span></span></a></div></aside>
+<article class="doc">
+<h2 class="sec" id="overview"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>OVERVIEW</span></h2>
+<div class="prose"><p><span class="t"><span class="sr">TWiRL</span><span aria-hidden="true">TW<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>RL</span></span> is a tiny digital delay line that bends pitch as its clock speeds up and slows down. Short OFFSET gives chorus and vibrato, long OFFSET gives warped slapback. Stomp HAVOC and the speed leaps to 16 Hz like a rotary speaker spinning up, and coasts back down when you let go.</p><p>GRIT models the chip&#x27;s character: companding, a sample clock that slows on long delays, fewer bits and a little hiss.</p></div>
+<div class="gallery"><figure><div class="shot"><img src="img/twirl/twirl_motion.webp" alt="One LFO cycle." loading="lazy"></div><figcaption>One LFO cycle.</figcaption></figure><figure><div class="shot"><img src="img/twirl/twirl_havoc.webp" alt="HAVOC engaged." loading="lazy"></div><figcaption>HAVOC engaged.</figcaption></figure></div>
+<h2 class="sec" id="quick"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>QUICK START</span></h2>
+<ol class="steps"><li><span class="n">01</span><span>Insert <span class="t"><span class="sr">TWiRL</span><span aria-hidden="true">TW<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>RL</span></span> on guitar or keys.</span></li><li><span class="n">02</span><span>MIX at 50% for chorus, 100% for vibrato.</span></li><li><span class="n">03</span><span>Set SPEED and DEPTH.</span></li><li><span class="n">04</span><span>Press HAVOC for the rotary rush.</span></li></ol>
+<h2 class="sec" id="how"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>HOW IT WORKS</span></h2>
+<div class="hows"><div class="how"><h3><svg class="mk" width="12" height="12" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg>Pitch from the clock</h3><p>DEPTH moves the chip&#x27;s clock up to an octave either way, so it bends like real tape or a bucket-brigade.</p></div><div class="how"><h3><svg class="mk" width="12" height="12" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg>HAVOC RAMP</h3><p>RAMP sets how long it takes to spin up; it coasts down 1.5 times slower, like a rotor.</p></div><div class="how"><h3><svg class="mk" width="12" height="12" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg>Synced</h3><p>SYNC locks the LFO to the host&#x27;s beat and bar position.</p></div></div>
+<h2 class="sec" id="controls"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>CONTROLS</span></h2>
+<p class="hint">Values in the dark wells are the defaults.</p>
+<h3 class="grp">MAIN</h3><div class="card table"><div class="row"><div class="rn">OFFSET<span class="rng">0-100% (1.5-90 ms)</span></div><div class="rv"><span class="lcd">35</span></div><div class="rd">Delay time: chorus at the short end, slapback at the long end.</div></div><div class="row"><div class="rn">SPEED<span class="rng">0-100% (0.05-10 Hz)</span></div><div class="rv"><span class="lcd">35</span></div><div class="rd">LFO rate.</div></div><div class="row"><div class="rn">DEPTH<span class="rng">0-100%</span></div><div class="rv"><span class="lcd">50</span></div><div class="rd">How far pitch bends (up to an octave).</div></div><div class="row"><div class="rn">MIX<span class="rng">0-100%</span></div><div class="rv"><span class="lcd">50</span></div><div class="rd">Dry against wet. 100% is pure vibrato.</div></div><div class="row"><div class="rn">WAVE<span class="rng">TRIANGLE / SQUARE / RANDOM</span></div><div class="rv"><span class="lcd">TRIANGLE</span></div><div class="rd">LFO shape. Square and random are slewed for bleep-bloops.</div></div><div class="row"><div class="rn">TONE<span class="rng">FULL / HI-CUT</span></div><div class="rv"><span class="lcd">FULL</span></div><div class="rd">Full range or darker.</div></div><div class="row"><div class="rn">HAVOC<span class="rng">ON / OFF</span></div><div class="rv"><span class="lcd">OFF</span></div><div class="rd">Maximum speed. HAVOC MODE: LATCH or HOLD.</div></div></div><h3 class="grp">EXTRAS</h3><div class="card table"><div class="row"><div class="rn">RAMP<span class="rng">0-999 ms</span></div><div class="rv"><span class="lcd">700</span></div><div class="rd">HAVOC spin-up time.</div></div><div class="row"><div class="rn">SYNC<span class="rng">free or note values</span></div><div class="rv"><span class="lcd">free</span></div><div class="rd">Tempo sync.</div></div><div class="row"><div class="rn">FEEDBACK<span class="rng">0-100%</span></div><div class="rv"><span class="lcd">0</span></div><div class="rd">Repeats.</div></div><div class="row"><div class="rn">GRIT<span class="rng">0-100%</span></div><div class="rv"><span class="lcd">40</span></div><div class="rd">Chip character.</div></div><div class="row"><div class="rn">STEREO<span class="rng">0-100%</span></div><div class="rv"><span class="lcd">0</span></div><div class="rd">Left and right out of phase.</div></div><div class="row"><div class="rn">VOLUME<span class="rng">-24 to +12 dB</span></div><div class="rv"><span class="lcd">0</span></div><div class="rd">Output level.</div></div></div>
+<h2 class="sec" id="tips"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>TIPS</span></h2>
+<ul class="tips"><li>RANDOM wave at slow SPEED with MIX 100% is a warped-tape wobble.</li><li>Long OFFSET, FEEDBACK 40% and GRIT high is a broken toy delay.</li></ul>
+<h2 class="sec" id="specs"><svg class="mk" width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>SPECS</span></h2>
+<dl class="specs card"><div><dt>TYPE</dt><dd>Audio effect (AU aufx), VST3, Standalone</dd></div><div><dt>OUTPUT</dt><dd>Stereo</dd></div></dl>
+<nav class="pn">
+<a href="interlude.html" style="--accent:#F26419;--accent-ink:#BF5319;--accent-lcd:#F26419;--accent-on:#1E1C18;--accent-soft:#FAE5D7;"><small>PREVIOUS</small><span class="t"><span class="sr">iNTERLUDE</span><span aria-hidden="true"><svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>NTERLUDE</span></span></a>
+<a href="hiraeth.html" class="nx" style="--accent:#7B89B7;--accent-ink:#677296;--accent-lcd:#808EBA;--accent-on:#1E1C18;--accent-soft:#E9EAED;"><small>NEXT</small><span class="t"><span class="sr">HiRAETH</span><span aria-hidden="true">H<svg class="li" viewBox="0 0 68 80"><path d="M3 24h30v41h17v15H1V65h17V39H3z"/><path d="M25.5 0l8 8-8 8-8-8z"/></svg>RAETH</span></span></a>
+</nav>
+</article></div></main>
+<footer class="foot"><div class="wrap"><svg class="mk" width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" transform="rotate(45 10 10)" fill="var(--accent)"/></svg><span>BB DSP · Digital Sonic Playground</span><span class="sp"></span><span>AU · VST3 · Standalone · macOS</span></div></footer>
+<script src="assets/site.js"></script>
+</body></html>
