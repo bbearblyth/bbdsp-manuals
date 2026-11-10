@@ -149,6 +149,11 @@ def nav (active):
 <a class="brand" href="index.html">{LOGO}<span><b>BB DSP</b><small>DIGITAL SONIC PLAYGROUND</small></span></a>
 <nav>{links}</nav></div></header>"""
 
+def asset_version (name):
+    """Short content hash, so browsers (phones especially) fetch a changed file instead of a cached one."""
+    import hashlib
+    with open (os.path.join (OUT, "assets", name), "rb") as f: return hashlib.sha1 (f.read()).hexdigest()[:8]
+
 def page (fname, title_text, body, active="", style="", desc=""):
     doc = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -158,12 +163,12 @@ def page (fname, title_text, body, active="", style="", desc=""):
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v={asset_version ("site.css")}">
 </head><body style="{style}">
 {nav (active)}
 <main>{body}</main>
 <footer class="foot"><div class="wrap">{mark (14)}<span>BB DSP · Digital Sonic Playground</span><span class="sp"></span><span>AU · VST3 · Standalone · macOS</span></div></footer>
-<script src="assets/site.js"></script>
+<script src="assets/site.js?v={asset_version ("site.js")}"></script>
 </body></html>"""
     with open (os.path.join (OUT, fname), "w") as f: f.write (doc)
 
