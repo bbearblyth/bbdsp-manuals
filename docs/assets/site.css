@@ -170,10 +170,20 @@ section.doc { padding-top: 64px; padding-bottom: 40px; max-width: 980px; }
   .top nav a:hover { border-color: var(--frame); }
   .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-on); }
   .btn.ghost:hover { border-color: var(--ink); background: transparent; color: var(--ink); }
-  .pcard:hover { transform: translateY(-3px); border-color: var(--accent); }
-  .pcard:hover .pcard-img img { transform: scale(1.03); }
+  .pcard:hover { border-color: var(--accent); }
   .toc a:hover { color: var(--ink); }
   .pn a:hover { border-color: var(--accent); }
+}
+/* The lift and screenshot zoom on plug-in cards: wide screens with a mouse only. */
+@media (hover: hover) and (pointer: fine) and (min-width: 701px) {
+  .pcard:hover { transform: translateY(-3px); }
+  .pcard:hover .pcard-img img { transform: scale(1.03); }
+}
+/* Phones: cards never change size, whatever the browser reports about hover. */
+@media (max-width: 700px) {
+  .pcard, .pcard:hover, .pcard:active, .pcard:focus,
+  .pcard-img img, .pcard:hover .pcard-img img { transform: none !important; transition: none !important; }
+  .pcard { -webkit-tap-highlight-color: transparent; }
 }
 
 /* Animation keyframes for the per-plugin shapes */
