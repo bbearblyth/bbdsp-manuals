@@ -11,3 +11,7 @@ Rebuild after editing:
     python3 build.py
 
 Screenshots in `docs/img/` are the plug-ins' own offscreen test renders, converted to WebP.
+
+Check phone layout in WebKit (what iPhone browsers use):
+
+    swiftc -O tools/webkitshot.swift -o /tmp/webkitshot && /tmp/webkitshot "http://localhost:8765/index.html" out.png 390
