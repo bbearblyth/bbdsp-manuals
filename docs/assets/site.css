@@ -52,7 +52,7 @@ h1, h2, h3 { color: var(--ink); }
 .sec .count { font-size: 12px; color: var(--label); }
 
 /* Home hero */
-.hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 48px; align-items: center; padding-top: 72px; padding-bottom: 32px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-top: 72px; padding-bottom: 32px; }
 .hero h1 { font: 400 clamp(44px, 6.4vw, 84px)/1.02 var(--mono); text-transform: uppercase; letter-spacing: .01em; margin: 0 0 24px; }
 .hero h1 em { font-style: normal; color: var(--accent); }
 .hero-logo .logo { width: 100%; max-width: 440px; margin-left: auto; }
@@ -69,19 +69,19 @@ h1, h2, h3 { color: var(--ink); }
 .seg button { font: 12px/1 var(--mono); letter-spacing: .08em; padding: 11px 12px; background: var(--card); color: var(--charcoal);
               border: 2px solid var(--charcoal); cursor: pointer; }
 .seg button.on { background: var(--accent); border-color: var(--accent); color: var(--accent-on); }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.pcard { display: flex; flex-direction: column; background: var(--card); border: 2px solid color-mix(in srgb, var(--accent) 55%, var(--rule));
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.pcard { display: flex; flex-direction: column; min-width: 0; background: var(--card); border: 2px solid color-mix(in srgb, var(--accent) 55%, var(--rule));
          text-decoration: none; color: var(--body); transition: transform .18s ease, border-color .18s ease; }
 .pcard[hidden] { display: none; }
 .pcard-h { display: flex; align-items: center; gap: 10px; padding: 16px 16px 14px; color: var(--ink); font-size: 18px; }
 .pcard-h .chip { margin-left: auto; font-size: 10px; padding: 5px 6px; }
-.pcard-img { aspect-ratio: 16 / 10; overflow: hidden; background: #EDEAE2; margin: 0 16px; border: 1px solid var(--rule); }
+.pcard-img { position: relative; height: 0; padding-top: calc((100% - 32px) * .625); /* 16:10 of the box (card width less its 16px margins); works in every WebKit */ overflow: hidden; background: #EDEAE2; margin: 0 16px; border: 1px solid var(--rule); }
 .pcard-img.dark { background: #131210; }
-.pcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform .4s ease; }
+.pcard-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform .4s ease; }
 .pcard p { margin: 14px 16px 18px; font-size: 15px; line-height: 1.5; }
 
 /* Plugin page hero */
-.phero { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: center; padding-top: 64px; padding-bottom: 32px; }
+.phero { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: center; padding-top: 64px; padding-bottom: 32px; }
 .pname { font: 400 clamp(56px, 9vw, 120px)/.95 var(--mono); margin: 0 0 22px; color: var(--ink); }
 .pname .t { letter-spacing: .02em; }
 .pname.grad .t > span[aria-hidden] { background: var(--accent-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -98,7 +98,7 @@ h1, h2, h3 { color: var(--ink); }
 figcaption { font: 12px/1.4 var(--mono); letter-spacing: .08em; color: var(--label); margin-top: 10px; text-transform: uppercase; }
 
 /* Plugin page body */
-.layout { display: grid; grid-template-columns: 200px 1fr; gap: 48px; padding-bottom: 40px; }
+.layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding-bottom: 40px; }
 .toc > div { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 2px; margin-top: 64px; }
 .toc a { font: 12px/1 var(--mono); letter-spacing: .1em; color: var(--label); text-decoration: none; padding: 10px 12px; border-left: 3px solid var(--rule); }
 .toc a.on { color: var(--ink); border-left-color: var(--accent); background: var(--accent-soft); }
@@ -124,7 +124,7 @@ figcaption { font: 12px/1.4 var(--mono); letter-spacing: .08em; color: var(--lab
 .grp { display: flex; align-items: center; gap: 10px; font: 13px/1 var(--mono); letter-spacing: .14em; color: var(--label); margin: 30px 0 10px; }
 .grp::before { content: ""; width: 18px; height: 3px; background: var(--frame); }
 .table { padding: 0; }
-.row { display: grid; grid-template-columns: 230px 150px 1fr; gap: 20px; align-items: center; padding: 14px 22px; border-top: 1px solid var(--rule); }
+.row { display: grid; grid-template-columns: 230px 150px minmax(0, 1fr); gap: 20px; align-items: center; padding: 14px 22px; border-top: 1px solid var(--rule); }
 .row:first-child { border-top: 0; }
 .rn { font: 14px/1.3 var(--mono); letter-spacing: .08em; color: var(--ink); }
 .rn .t { letter-spacing: .08em; }
@@ -204,10 +204,10 @@ section.doc { padding-top: 64px; padding-bottom: 40px; max-width: 980px; }
 }
 
 @media (max-width: 960px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
-  .layout { grid-template-columns: 1fr; gap: 0; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .toc { display: none; }
-  .row { grid-template-columns: 180px 140px 1fr; }
+  .row { grid-template-columns: 180px 140px minmax(0, 1fr); }
 }
 @media (max-width: 700px) {
   body { font-size: 16px; }
@@ -215,13 +215,18 @@ section.doc { padding-top: 64px; padding-bottom: 40px; max-width: 980px; }
   .top-in { height: 56px; gap: 12px; }
   .brand small { display: none; }
   .top nav a { padding: 8px 8px; font-size: 11px; }
-  .hero, .phero { grid-template-columns: 1fr; padding-top: 40px; gap: 28px; }
+  .hero, .phero { grid-template-columns: minmax(0, 1fr); padding-top: 40px; gap: 28px; }
   .hero-logo .logo { max-width: 240px; margin: 0 auto; }
   .phero-motion { max-width: 240px; }
-  .grid, .steps, .places, .colours, .pn { grid-template-columns: 1fr; }
-  .row { grid-template-columns: 1fr auto; gap: 8px 14px; padding: 14px 16px; }
+  .grid, .steps, .places, .colours, .pn { grid-template-columns: minmax(0, 1fr); }
+  .row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 14px; padding: 14px 16px; }
   .rd { grid-column: 1 / -1; }
   .card { padding: 20px; }
   .lede { font-size: 18px; }
   .sec { margin-top: 48px; }
+}
+@media (max-width: 400px) {
+  /* Smallest phones: the logo alone, so both menu buttons fit beside it. */
+  .brand > span { display: none; }
+  .top nav a { padding: 8px 7px; }
 }
